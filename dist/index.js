@@ -2138,7 +2138,7 @@ function applyExcludeFilter(stat, excludeFilter) {
     // match exclude, return immediatley
     if (excludeFilter.length > 0) {
         const pathWithFolderSlash = stat.path + (stat.isDirectory() ? "/" : "");
-        const excludeMatch = multiMatch_1.default(pathWithFolderSlash, excludeFilter, { matchBase: true, dot: true });
+        const excludeMatch = multiMatch_1.default(pathWithFolderSlash, excludeFilter, { matchBase: true, dot: false });
         if (excludeMatch.length > 0) {
             return false;
         }
